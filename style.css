@@ -1,0 +1,13 @@
+img{
+    height: 300px;
+    width: 300px;
+}
+
+h1{
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-stretch: narrower;
+    color: blueviolet;
+    align-self: center;
+    justify-content: center;
+}

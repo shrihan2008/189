@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+            Tour
+        </title>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+    
+
+    </head>
+    <body>
+<a-scene>
+    <a-sky color="orange">
+
+    </a-sky>
+        <a-camera id="camera" wasd-controls="enabled:false;">
+        <!-- App Title -->
+        <a-entity
+          id="app-title"
+          position="0 0.73 -1"
+          text="font: exo2bold; align: center; width: 3; color: green; value: Lets travel the seven wonders of the world !"
+        >
+          <a-entity
+            id="app-subtitle"
+            position="0 -0.1 0"
+            text="font: dejavu; align: center; width: 1.5; color: blue; value: From the comfort of your home "
+          ></a-entity>
+        </a-entity>
+
+<a-cursor></a-cursor>
+
+      </a-camera>
+</a-scene>
+
+    </body>
+</html>
