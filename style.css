@@ -7,7 +7,14 @@ h1{
     font-size: 50px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-stretch: narrower;
-    color: blueviolet;
+    color:yellow;
     align-self: center;
     justify-content: center;
+}
+
+p{
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aquamarine;
+    font-weight: 400;
 }
