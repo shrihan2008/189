@@ -51,7 +51,7 @@ AFRAME.registerComponent("tour", {
       const skyEl = document.querySelector("#main-container");
   
       skyEl.setAttribute("material", {
-        src: `./assets/${selectedCard}/place-0`,
+        src: `../assets/${selectedCard}/place-1.jpeg`,
         color: "#fff"
       });
     },
@@ -59,40 +59,40 @@ AFRAME.registerComponent("tour", {
       
       const thumbNailsRef = [
         {
-          id: "taj-mahal",
+          id: "taj_mahal",
           title: "Taj Mahal",
-          url: "./assets/taj_mahal/taj_mahal.png"
+          url: "../assets/taj_mahal/taj_mahal.png"
         },
         {
           id: "machu",
           title: "Machu Pichu",
-          url: "./assets/machu/machu.jpg"
+          url: "../assets/machu/machu.jpg"
         },
   
         {
           id: "petra",
           title: "Petra",
-          url: "./assets/petra/petra.jpg"
+          url: "../assets/petra/petra.jpg"
         },
         {
-          id: "great-wall-of-china",
+          id: "great",
           title: "Great Wall Of China",
-          url: "./assets/great/great.jpg"
+          url: "../assets/great/great.jpg"
         },
         {
             id: "christ",
             title: "Christ",
-            url: "./assets/christ/christ.jpeg"
+            url: "../assets/christ/christ.jpeg"
           },
           {
-            id: "chichen_itza",
+            id: "Chichen_Itza",
             title: "Chichen Itza",
-            url: "./assets/Chichen_Itza/Chichen_Itza.jpg"
+            url: "../assets/Chichen_Itza/Chichen_Itza.jpg"
           },
           {
             id: "colloseum",
             title: "Colloseum",
-            url: "./assets/colloseum/colloseum.jpg"
+            url: "../assets/colloseum/colloseum.jpg"
           }
           
       ];
@@ -132,7 +132,7 @@ AFRAME.registerComponent("tour", {
         color: "cyan",
         opacity: 1
       });
-      entityEl.setAttribute("cursor-listener", {});
+      entityEl.setAttribute("cursorevent", {});
       return entityEl;
     },
     createThumbNail: function(item) {
@@ -143,7 +143,7 @@ AFRAME.registerComponent("tour", {
         radius: 6
       });
       entityEl.setAttribute("material", { src: item.url });
-      entityEl.setAttribute("cursor-listener", {});
+      entityEl.setAttribute("cursorevent", {});
       return entityEl;
     },
     createTitleEl: function(position, item) {

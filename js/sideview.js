@@ -44,7 +44,7 @@ AFRAME.registerComponent("place-side-view", {
 
  
     entityEl.setAttribute("position", position);
-    entityEl.setAttribute("cursor-listener", {});
+    entityEl.setAttribute("cursorevent", {});
 
     return entityEl;
   }

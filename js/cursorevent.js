@@ -1,4 +1,4 @@
-AFRAME.registerComponenet('cursorevent',{
+AFRAME.registerComponent('cursorevent',{
     schema: {
         selectedItemId: { default: "", type: "string" }
       },
@@ -8,7 +8,7 @@ AFRAME.registerComponenet('cursorevent',{
         this.handleMouseLeaveEvents();
       },
       handleClickEvents: function() {
-        //  Click Events
+
         this.el.addEventListener("click", evt => {
           const placesContainer = document.querySelector("#places-container");
     
@@ -19,13 +19,13 @@ AFRAME.registerComponenet('cursorevent',{
             const id = this.el.getAttribute("id");
     
             const placesId = [
-              "taj-mahal",
+              "taj_mahal",
               "machu",
               "petra",
               "christ",
-              "chichen_itza",
+              "Chichen_Itza",
               "colloseum",
-              "great-wall-of-china"
+              "great"
 
             ];
     
@@ -52,10 +52,10 @@ AFRAME.registerComponenet('cursorevent',{
     
         const placesContainer = document.querySelector("#places-container");
     
-        const { selectedItemId } = placesContainer.getAttribute("cursor-listener");
+        const { selectedItemId } = placesContainer.getAttribute("cursorevent");
     
         //Keeping all the images as id of the images with .jpg extension
-        const sideViewPlacesId = ["place-1", "place-2", "place-3", "place-4"];
+        const sideViewPlacesId = ["place-1"];
     
         if (sideViewPlacesId.includes(id)) {
           
@@ -67,8 +67,8 @@ AFRAME.registerComponenet('cursorevent',{
           
           //Set the 360 degree image to the sky element.
           skyEl.setAttribute("material", {
-            src: `./assets/${selectedItemId}/${id}.jpg`,
-            color: "#fff"
+            src: `../assets/${selectedItemId}/${id}.jpeg`,
+            color: "grey"
           });
          
         }
@@ -85,14 +85,14 @@ AFRAME.registerComponenet('cursorevent',{
       },
       handlePlacesListState: function() {
         const id = this.el.getAttribute("id");
-        const placesId = ["taj-mahal", "machu", "petra", "christ","chichen_itza","colloseum","great-wall-of-china"];
+        const placesId = ["taj_mahal", "machu", "petra", "christ","Chichen_Itza","colloseum","great"];
         if (placesId.includes(id)) {
           const placeContainer = document.querySelector("#places-container");
-          placeContainer.setAttribute("cursor-listener", {
+          placeContainer.setAttribute("cursorevent", {
             selectedItemId: id
           });
           this.el.setAttribute("material", {
-            color:"#D76B30",
+            color:"red",
             opacity: 1
           });
         }
@@ -109,7 +109,7 @@ AFRAME.registerComponenet('cursorevent',{
               const id = el.getAttribute("id");
               if (id == selectedItemId) {
                 el.setAttribute("material", {
-                  color: "#0077CC",
+                  color: "red",
                   opacity: 1
                 });
               }
